@@ -23,6 +23,7 @@ kubectl get componentstatuses
 kubectl get pods --all-namespaces
 
 kubectl get events
+
 kubectl get pods
 kubectl get replicaset
 kubectl get deployment
@@ -110,3 +111,22 @@ kubectl get all
 
 kubectl apply -f deployment.yaml 
 kubectl apply -f ../currency-conversion/deployment.yaml 
+=============
+
+kubectl create deployment hello-world-python --image=repo
+
+kubectl expose deployment hello-world-python --type=LoadBalancer --port=8080
+
+kubectl get replicasets
+kubectl get events
+kubectl get deployment
+kubectl get service
+kubectl get pods -o wise( gives ip address)
+kubectl get rs
+kubectl scale deployment hello-world-python --replicas=3
+kubectl get events --sort-by=.metadata.creationTimestamp
+
+
+
+
+
